@@ -16,13 +16,13 @@ const App = () => {
     console.log("Page Mounted")
   }, []);
 
-
+  
   return (
     <div className="info">
       <h1>Sign Up To Volunteer ({renderCount / 1})</h1>  
       <p>Please fill out information</p>
 
-        <form onSubmit={handleSubmit(onSubmit, onError)}> {/* Gets the functions  */}
+      <form onSubmit={handleSubmit(onSubmit, onError)}> {/* Gets the functions  */}
         <label htmlFor="name">Name:</label>
         <input type="text" id="name" {...register("name")} />
 
@@ -32,17 +32,17 @@ const App = () => {
         <label htmlFor="age">Age:</label>
         <input type="text" id="age" {...register("age")} />
 
-       <label htmlFor="username">User Name:</label>
+        <label htmlFor="username">User Name:</label>
         <input type="text" id="username" {...register("username")} />
 
         <label htmlFor="password">Password:</label>
         <input type="text" id="password" {...register("password")} />
 
-       <label htmlFor="confirm">Confirm Password:</label>
-       <input type="text" id="confirm" {...register("confirm")} />
+        <label htmlFor="confirm">Confirm Password:</label>
+        <input type="text" id="confirm" {...register("confirm")} />
 
-       <label htmlFor="country">County:</label>
-       <select id="country" name="country" {...register("county")}>
+        <label htmlFor="country">County:</label>
+        <select id="country" name="country" {...register("county")}>
           <option value="Dallas">Dallas</option>
           <option value="Denton">Denton</option>
           <option value="Wise">Wise</option>
@@ -54,7 +54,8 @@ const App = () => {
 
        <input type="submit" value="Submit" className="ourSubmit"/> 
       </form>
-       <DevTool control={control}/>
+
+      <DevTool control={control}/>
     </div>
   )
 }
