@@ -27,7 +27,7 @@ const App = () => {
         <input
          type="text"
          id="name" 
-         {...register("name")} />
+         {...register("name")}/>
 
         <label htmlFor="email">Email:</label>
         <input
@@ -50,8 +50,8 @@ const App = () => {
         <label htmlFor="password">Password:</label>
         <input type="text"
         id="password"
-        {...register("password")} />
-
+        {...register("password")}/>
+    
         <label htmlFor="confirm">Confirm Password:</label>
         <input 
         type="text"
