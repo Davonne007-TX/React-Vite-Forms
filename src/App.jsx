@@ -24,33 +24,50 @@ const App = () => {
 
       <form onSubmit={handleSubmit(onSubmit, onError)}> {/* Gets the functions  */}
         <label htmlFor="name">Name:</label>
-        <input type="text" id="name" {...register("name")} />
+        <input
+         type="text"
+         id="name" 
+         {...register("name")} />
 
         <label htmlFor="email">Email:</label>
-        <input type="text" id="email" {...register("email")} />
+        <input
+         type="text"
+         id="email"
+         {...register("email")} />
 
         <label htmlFor="age">Age:</label>
-        <input type="text" id="age" {...register("age")} />
+        <input
+        type="text"
+        id="age"
+        {...register("age")} />
 
         <label htmlFor="username">User Name:</label>
-        <input type="text" id="username" {...register("username")} />
+        <input
+         type="text"
+         id="username" 
+         {...register("username")} />
 
         <label htmlFor="password">Password:</label>
-        <input type="text" id="password" {...register("password")} />
+        <input type="text"
+        id="password"
+        {...register("password")} />
 
         <label htmlFor="confirm">Confirm Password:</label>
-        <input type="text" id="confirm" {...register("confirm")} />
+        <input 
+        type="text"
+        id="confirm"
+        {...register("confirm")} />
 
         <label htmlFor="country">County:</label>
-        <select id="country" name="country" {...register("county")}>
-          <option value="Dallas">Dallas</option>
-          <option value="Denton">Denton</option>
-          <option value="Wise">Wise</option>
-          <option value="Hood">Hood</option>
-          <option value="Ellis">Ellis</option>
-          <option value="Collin">Collin</option>
-          <option value="Johnson">Johnson</option>
-       </select>
+           <select id="country" name="country" {...register("county")}>
+              <option value="Dallas">Dallas</option>
+             <option value="Denton">Denton</option>
+             <option value="Wise">Wise</option>
+             <option value="Hood">Hood</option>
+             <option value="Ellis">Ellis</option>
+             <option value="Collin">Collin</option>
+             <option value="Johnson">Johnson</option>
+            </select>
 
        <input type="submit" value="Submit" className="ourSubmit"/> 
       </form>
@@ -118,8 +135,14 @@ export default App;
      * All functions for useForm Hook.  const { register, control, handleSubmit } = useForm();
        - kinda like how useState, is  const [initialState, setNewState] = useState(); , setNewState
         is a function
+        - register is a function provided by the useForm hook. We can assign it to each input field
+          so that the react-hook-form can track the changes for the input field value
+
       - control: This function is used to gain control over the form inputs. It provides access to the
-       input's value and allows customization of its behavior
+        input's value and allows customization of its behavior
+      
+      - register is a function provided by the useForm hook. We can assign it to each input field so
+        that the react-hook-form can track the changes for the input field value 
 
 
   */
