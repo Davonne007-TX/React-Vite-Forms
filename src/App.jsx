@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react'
+import {  useEffect } from 'react'
 import { useForm} from 'react-hook-form'
-import { DevTool } from '@hookform/devtools';
+import { DevTool } from '@hookform/devtools';  //tracking field values 
 import './App.css'
 
 let renderCount = 0; 
@@ -19,7 +19,7 @@ const App = () => {
   
   return (
     <div className="info">
-      <h1>Sign Up To Volunteer ({renderCount / 1})</h1>  
+      <h1>Sign Up To Volunteer ({renderCount / 1})</h1>  {/*makes the page not re-render when entering text in input*/}
       <p>Please fill out information</p>
 
       <form onSubmit={handleSubmit(onSubmit, onError)}> {/* Gets the functions  */}
